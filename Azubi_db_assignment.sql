@@ -46,7 +46,7 @@ INNER JOIN wallets
 ON transfers.source_wallet_id = wallets.wallet_id 
 WHERE transfers.when_created > CURRENT_DATE - INTERVAL '1 week'
 GROUP BY wallets.ledger_location, transfers.kind; 
-QUESTION 10
+--QUESTION 10
 SELECT source_wallet_id FROM transfers
 WHERE send_amount_currency='CFA'
 AND send_amount_scalar>100000000
