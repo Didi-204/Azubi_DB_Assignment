@@ -50,4 +50,4 @@ QUESTION 10
 SELECT source_wallet_id FROM transfers
 WHERE send_amount_currency='CFA'
 AND send_amount_scalar>100000000
-AND when_created > CURRENT_DATE - INTERVAL '1 MONTH'
+AND when_created > CURRENT_DATE - INTERVAL '1 MONTH';
