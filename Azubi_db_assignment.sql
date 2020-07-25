@@ -36,9 +36,9 @@ WHERE agent_transactions.when_created = CURRENT_DATE - INTERVAL '1 WEEK'
 GROUP BY wallets.ledger_location,agent_transactions.send_amount_currency;
 --QUESTION 9
 SELECT COUNT(transfers.source_wallet_id) 
-AS unique_Senders, 
+AS unique_senders, 
 COUNT (transfer_id) 
-AS transaction_Count, transfers.kind 
+AS transaction_count, transfers.kind 
 AS transfer_kind, wallets.ledger_location 
 AS country, SUM (transfers.send_amount_scalar) 
 AS volume FROM transfers 
